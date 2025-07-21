@@ -1,0 +1,106 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --neon-cyan: #00ffff;
+  --neon-pink: #ff00ff;
+  --neon-green: #00ff99;
+  --neon-yellow: #ffe600;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  color: white;
+  scroll-behavior: smooth;
+}
+
+.text-neon-cyan {
+  color: var(--neon-cyan);
+}
+
+.text-neon-pink {
+  color: var(--neon-pink);
+}
+
+.text-neon-green {
+  color: var(--neon-green);
+}
+
+/* Neon background utilities for Tailwind JIT */
+.bg-neon-pink { background-color: var(--neon-pink); }
+.bg-neon-cyan { background-color: var(--neon-cyan); }
+.bg-neon-green { background-color: var(--neon-green); }
+.bg-neon-yellow { background-color: var(--neon-yellow); }
+
+.bg-neon-pink\/20 { background-color: rgba(255,0,255,0.2); }
+.bg-neon-pink\/40 { background-color: rgba(255,0,255,0.4); }
+.bg-neon-pink\/60 { background-color: rgba(255,0,255,0.6); }
+.bg-neon-pink\/80 { background-color: rgba(255,0,255,0.8); }
+.bg-neon-pink\/90 { background-color: rgba(255,0,255,0.9); }
+
+.bg-neon-cyan\/20 { background-color: rgba(0,255,255,0.2); }
+.bg-neon-cyan\/40 { background-color: rgba(0,255,255,0.4); }
+.bg-neon-cyan\/60 { background-color: rgba(0,255,255,0.6); }
+.bg-neon-cyan\/80 { background-color: rgba(0,255,255,0.8); }
+.bg-neon-cyan\/90 { background-color: rgba(0,255,255,0.9); }
+
+.bg-neon-green\/20 { background-color: rgba(0,255,153,0.2); }
+.bg-neon-green\/40 { background-color: rgba(0,255,153,0.4); }
+.bg-neon-green\/60 { background-color: rgba(0,255,153,0.6); }
+.bg-neon-green\/80 { background-color: rgba(0,255,153,0.8); }
+.bg-neon-green\/90 { background-color: rgba(0,255,153,0.9); }
+
+.bg-neon-yellow\/20 { background-color: rgba(255,230,0,0.2); }
+.bg-neon-yellow\/40 { background-color: rgba(255,230,0,0.4); }
+.bg-neon-yellow\/60 { background-color: rgba(255,230,0,0.6); }
+.bg-neon-yellow\/80 { background-color: rgba(255,230,0,0.8); }
+.bg-neon-yellow\/90 { background-color: rgba(255,230,0,0.9); }
+
+/* For gradient stops */
+.from-neon-pink\/20 { --tw-gradient-from: rgba(255,0,255,0.2); --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to,rgba(255,0,255,0)); }
+.from-neon-cyan\/20 { --tw-gradient-from: rgba(0,255,255,0.2); --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to,rgba(0,255,255,0)); }
+.from-neon-green\/20 { --tw-gradient-from: rgba(0,255,153,0.2); --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to,rgba(0,255,153,0)); }
+.from-neon-yellow\/20 { --tw-gradient-from: rgba(255,230,0,0.2); --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to,rgba(255,230,0,0)); }
+
+/* For text and border colors */
+.border-neon-pink { border-color: var(--neon-pink); }
+.border-neon-cyan { border-color: var(--neon-cyan); }
+.border-neon-green { border-color: var(--neon-green); }
+.border-neon-yellow { border-color: var(--neon-yellow); }
+
+.hover\:text-neon-pink:hover {
+  color: var(--neon-pink);
+}
+
+.hover\:text-neon-blue:hover {
+  color: #00ccff;
+}
+
+.hover\:bg-neon-pink:hover {
+  background-color: var(--neon-pink);
+}
+
+.hover\:scale-105:hover {
+  transform: scale(1.05);
+}
+
+/* Removed .cosmic-bg background to allow Three.js starfield to show */
+
+/* Content container overlays for readability */
+.glass-overlay {
+  background: linear-gradient(120deg, rgba(10,20,40,0.85) 60%, rgba(0,0,0,0.85) 100%);
+  backdrop-filter: blur(8px) saturate(1.2);
+  -webkit-backdrop-filter: blur(8px) saturate(1.2);
+  border-radius: 2.5rem;
+  box-shadow: 0 0 80px 10px #0a0a0a, 0 0 120px 30px #ff3131, 0 0 180px 40px #00fff7;
+}
+
+/* For lighter overlays (e.g. cards) */
+.glass-card {
+  background: linear-gradient(120deg, rgba(20,30,50,0.85) 60%, rgba(0,0,0,0.85) 100%);
+  backdrop-filter: blur(4px) saturate(1.1);
+  -webkit-backdrop-filter: blur(4px) saturate(1.1);
+  border-radius: 1.5rem;
+  box-shadow: 0 0 40px 8px #ff00ff33, 0 0 60px 12px #00fff733;
+}
