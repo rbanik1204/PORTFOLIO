@@ -1,6 +1,8 @@
 import React from "react";
 import { FaDownload, FaAward, FaFilePdf } from "react-icons/fa";
 
+const resumePath = `${import.meta.env.BASE_URL}ratul_resume.pdf`;
+
 const Resume = () => {
   return (
     <section
@@ -17,7 +19,7 @@ const Resume = () => {
         before:content-[''] before:absolute before:inset-0 before:rounded-3xl before:z-[-1] before:blur-2xl before:bg-neon-cyan/30 before:opacity-0 hover:before:opacity-100">
         <div className="w-full max-w-4xl h-[600px] mb-8 shadow-xl rounded-xl overflow-hidden border-2 border-neon-green mx-auto">
           <iframe
-            src="/ratul_resume.pdf"
+            src={resumePath}
             title="Ratul Banik Resume"
             className="w-full h-full"
           />
@@ -25,7 +27,7 @@ const Resume = () => {
 
         <div className="flex gap-6 mb-10 justify-center">
           <a
-            href="/ratul_resume.pdf"
+            href={resumePath}
             download
             className="flex items-center gap-2 px-6 py-3 bg-neon-green text-black font-semibold rounded-full hover:scale-105 transition shadow-lg"
           >
@@ -33,7 +35,7 @@ const Resume = () => {
             Download Resume
           </a>
           <a
-            href="/ratul_resume.pdf"
+            href={resumePath}
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-2 px-6 py-3 border border-neon-green text-neon-green font-semibold rounded-full hover:bg-neon-green hover:text-black transition shadow-lg"
