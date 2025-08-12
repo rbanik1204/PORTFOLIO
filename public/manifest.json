@@ -12,31 +12,31 @@
   "categories": ["business", "productivity", "utilities"],
   "icons": [
     {
-      "src": "favicon.svg",
+      "src": "/portfolio/favicon.svg",
       "sizes": "any",
       "type": "image/svg+xml",
       "purpose": "any maskable"
     },
     {
-      "src": "favicon.png",
+      "src": "/portfolio/favicon.png",
       "sizes": "32x32",
       "type": "image/png"
     },
     {
-      "src": "apple-touch-icon.png",
+      "src": "/portfolio/apple-touch-icon.png",
       "sizes": "180x180",
       "type": "image/png"
     }
   ],
   "screenshots": [
     {
-      "src": "screenshot-mobile.png",
+      "src": "/portfolio/screenshot-mobile.png",
       "sizes": "390x844",
       "type": "image/png",
       "form_factor": "narrow"
     },
     {
-      "src": "screenshot-desktop.png",
+      "src": "/portfolio/screenshot-desktop.png",
       "sizes": "1920x1080",
       "type": "image/png",
       "form_factor": "wide"
