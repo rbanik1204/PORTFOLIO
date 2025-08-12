@@ -8,11 +8,18 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-// Middleware
-app.use(cors());
+// ====== Middleware ======
+app.use(cors({
+  origin: [
+    'https://<your-github-username>.github.io', // GitHub Pages frontend
+    'http://localhost:5173' // Vite dev server
+  ],
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  credentials: false
+}));
 app.use(express.json());
 
-// Email configuration
+// ====== Email transporter ======
 const transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
@@ -21,12 +28,11 @@ const transporter = nodemailer.createTransport({
   }
 });
 
-// Contact form endpoint
+// ====== Contact form endpoint ======
 app.post('/api/contact', async (req, res) => {
   try {
     const { name, email, message } = req.body;
 
-    // Validation
     if (!name || !email || !message) {
       return res.status(400).json({ 
         success: false, 
@@ -34,10 +40,9 @@ app.post('/api/contact', async (req, res) => {
       });
     }
 
-    // Email content
     const mailOptions = {
       from: process.env.EMAIL_USER,
-      to: 'ratulbanik1204@gmail.com', // Your email
+      to: 'ratulbanik1204@gmail.com', // Your personal email
       subject: `New Contact Form Message from ${name}`,
       html: `
         <h3>New Contact Form Submission</h3>
@@ -50,7 +55,6 @@ app.post('/api/contact', async (req, res) => {
       `
     };
 
-    // Send email
     await transporter.sendMail(mailOptions);
 
     res.status(200).json({ 
@@ -67,11 +71,12 @@ app.post('/api/contact', async (req, res) => {
   }
 });
 
-// Health check endpoint
+// ====== Health check ======
 app.get('/api/health', (req, res) => {
   res.json({ status: 'Server is running' });
 });
 
+// ====== Start server ======
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
