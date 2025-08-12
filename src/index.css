@@ -178,23 +178,38 @@ p {
 
 /* Mobile-specific optimizations */
 @media (max-width: 768px) {
-  /* Improve touch targets */
-  button, a, input, textarea, select {
-    min-height: 44px;
-    min-width: 44px;
+  /* Improve mobile typography */
+  h1 {
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
+    line-height: 1.2;
   }
   
-  /* Better mobile scrolling */
-  html {
-    -webkit-overflow-scrolling: touch;
-    scroll-behavior: smooth;
+  h2 {
+    font-size: clamp(1.25rem, 4vw, 2rem);
+    line-height: 1.3;
   }
   
-  /* Optimize text for mobile */
-  body {
-    font-size: 16px; /* Prevent zoom on iOS */
-    -webkit-text-size-adjust: 100%;
-    -ms-text-size-adjust: 100%;
+  h3 {
+    font-size: clamp(1.125rem, 3.5vw, 1.75rem);
+    line-height: 1.4;
+  }
+  
+  p {
+    font-size: clamp(0.875rem, 2.5vw, 1rem);
+    line-height: 1.6;
+  }
+  
+  /* Better mobile spacing */
+  .space-y-4 > * + * {
+    margin-top: 1rem;
+  }
+  
+  .space-y-6 > * + * {
+    margin-top: 1.5rem;
+  }
+  
+  .space-y-8 > * + * {
+    margin-top: 2rem;
   }
   
   /* Improve mobile form inputs */
@@ -202,12 +217,15 @@ p {
     font-size: 16px; /* Prevent zoom on iOS */
     -webkit-appearance: none;
     border-radius: 8px;
+    padding: 12px 16px;
   }
   
   /* Better mobile button styling */
-  button {
+  button, a {
     -webkit-tap-highlight-color: transparent;
     touch-action: manipulation;
+    min-height: 44px; /* iOS recommended touch target size */
+    min-width: 44px;
   }
   
   /* Optimize mobile animations */
@@ -219,6 +237,60 @@ p {
   .glass-card {
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
+  }
+  
+  /* Better mobile navigation */
+  .nav-link {
+    padding: 12px 16px;
+    font-size: 16px;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Mobile-specific text adjustments */
+  .text-sm {
+    font-size: 0.875rem;
+  }
+  
+  .text-base {
+    font-size: 1rem;
+  }
+  
+  .text-lg {
+    font-size: 1.125rem;
+  }
+  
+  /* Mobile-specific spacing */
+  .px-4 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  .py-8 {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+  
+  .gap-6 {
+    gap: 1.5rem;
+  }
+  
+  .gap-8 {
+    gap: 2rem;
+  }
+  
+  /* Mobile-specific margins */
+  .mb-4 {
+    margin-bottom: 1rem;
+  }
+  
+  .mb-6 {
+    margin-bottom: 1.5rem;
+  }
+  
+  .mb-8 {
+    margin-bottom: 2rem;
   }
 }
 
