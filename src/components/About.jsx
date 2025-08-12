@@ -1,4 +1,5 @@
 import React from "react";
+import profileImg from "../assets/WhatsApp Image 2025-07-21 at 17.38.43_df50f27d.jpg";
 
 const About = () => {
   return (
@@ -12,8 +13,25 @@ const About = () => {
         </h2>
         
         <div className="grid lg:grid-cols-3 gap-12 items-start">
-          {/* Left: Professional Highlights */}
+          {/* Left: Profile Image (Desktop) & Professional Highlights */}
           <div className="lg:col-span-1 space-y-6">
+            {/* Professional profile image - Hidden on mobile, visible on desktop */}
+            <div className="hidden lg:flex justify-center">
+              <div className="relative group">
+                <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-blue-500/20 to-purple-500/20 blur-xl opacity-60 group-hover:opacity-80 transition-opacity duration-300"></div>
+                <div className="relative w-64 h-64 rounded-2xl border-2 border-gray-300/30 shadow-2xl flex items-center justify-center bg-gradient-to-br from-gray-800 to-gray-900 overflow-hidden backdrop-blur-sm">
+                  <img 
+                    src={profileImg} 
+                    alt="Ratul Banik - MERN Stack Developer" 
+                    className="w-full h-full object-cover object-top rounded-2xl"
+                    loading="eager"
+                    style={{ objectPosition: 'center 20%' }}
+                  />
+                  <div className="absolute inset-0 bg-black/10 rounded-2xl"></div>
+                </div>
+              </div>
+            </div>
+            
             {/* Professional highlights */}
             <div className="space-y-4">
               <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/10 shadow-lg">
