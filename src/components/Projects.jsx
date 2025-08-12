@@ -3,58 +3,58 @@ import { FaGithub, FaExternalLinkAlt, FaCode, FaRobot, FaServer } from "react-ic
 
 const projects = [
   {
-    title: "Smart Waste Segregator",
-    description: "An intelligent IoT system that uses computer vision and sensors to automatically segregate dry, wet, and metallic waste. Features real-time monitoring dashboard and mobile app integration.",
-    tech: ["Arduino", "TensorFlow", "React", "IoT", "Python"],
-    github: "https://github.com/rbanik1204/smart-waste-segregator",
+    title: "RC Car with IoT Features",
+    description: "Built a custom RC car with ESP8266 microcontroller, motor driver, and ultrasonic sensor. Features WAN, LAN, and IR control capabilities for remote operation.",
+    tech: ["ESP8266", "IoT", "Arduino", "C++", "Hardware"],
+    github: "https://github.com/rbanik1204/rc-car-iot",
     live: "",
     icon: <FaServer className="text-2xl text-blue-400" />,
-    category: "IoT & AI"
+    category: "IoT & Hardware"
   },
   {
-    title: "AI Career Guidance Bot",
-    description: "An intelligent chatbot powered by OpenAI that provides personalized career guidance to students. Integrates with educational databases and offers tailored recommendations.",
-    tech: ["OpenAI API", "React", "Node.js", "MongoDB", "NLP"],
-    github: "https://github.com/rbanik1204/ai-career-bot",
+    title: "AI-Based Help Bot for MOSDAC Portal",
+    description: "Developed an intelligent help bot entirely in Python to assist users in navigating and accessing portal data efficiently. Built for MOSDAC portal assistance.",
+    tech: ["Python", "AI/ML", "Data Analysis", "NLP", "Web Scraping"],
+    github: "https://github.com/rbanik1204/mosdac-help-bot",
     live: "",
     icon: <FaRobot className="text-2xl text-purple-400" />,
     category: "AI/ML"
   },
   {
-    title: "Personal Portfolio",
-    description: "A modern, responsive portfolio website built with React and Three.js. Features 3D animations, smooth scrolling, and professional design showcasing my skills and projects.",
-    tech: ["React", "Three.js", "Tailwind CSS", "Vite", "Framer Motion"],
-    github: "https://github.com/rbanik1204/portfolio",
-    live: "https://ratulbanik.vercel.app",
+    title: "Peer-to-Peer File Sharing System",
+    description: "Designed and implemented a P2P file sharing system that enables direct file sharing over large distances without cloud storage. Built for hackathon project.",
+    tech: ["Python", "Networking", "Socket Programming", "P2P", "File Transfer"],
+    github: "https://github.com/rbanik1204/p2p-file-sharing",
+    live: "",
     icon: <FaCode className="text-2xl text-green-400" />,
+    category: "Networking"
+  },
+  {
+    title: "Web Development Portfolio",
+    description: "Created responsive navigation bars, styled layouts with advanced CSS effects, and built pages using HTML/CSS/JavaScript. Showcases modern web development skills.",
+    tech: ["HTML", "CSS", "JavaScript", "Responsive Design", "Advanced CSS"],
+    github: "https://github.com/rbanik1204/web-portfolio",
+    live: "",
+    icon: <FaCode className="text-2xl text-yellow-400" />,
     category: "Web Development"
   },
   {
-    title: "E-Commerce Platform",
-    description: "A full-stack e-commerce solution with user authentication, payment integration, admin dashboard, and responsive design. Built with modern web technologies.",
-    tech: ["React", "Django", "PostgreSQL", "Stripe", "Docker"],
-    github: "https://github.com/rbanik1204/ecommerce-platform",
-    live: "",
-    icon: <FaCode className="text-2xl text-yellow-400" />,
-    category: "Full Stack"
-  },
-  {
-    title: "Data Analysis Dashboard",
-    description: "Interactive dashboard for analyzing business metrics and KPIs. Features real-time data visualization, custom charts, and export functionality.",
-    tech: ["Python", "Pandas", "Plotly", "Streamlit", "SQL"],
-    github: "https://github.com/rbanik1204/data-dashboard",
+    title: "Technical Presentations & Reports",
+    description: "Prepared and delivered multiple technical presentations on AI, Data Structures & Algorithms, Theory of Computation, Environmental Science, and Software Engineering.",
+    tech: ["Technical Writing", "Presentations", "Research", "Documentation", "Analysis"],
+    github: "",
     live: "",
     icon: <FaRobot className="text-2xl text-cyan-400" />,
-    category: "Data Science"
+    category: "Academic"
   },
   {
-    title: "Task Management App",
-    description: "A collaborative task management application with real-time updates, team collaboration features, and progress tracking. Built for productivity and team efficiency.",
-    tech: ["React", "Node.js", "Socket.io", "MongoDB", "JWT"],
-    github: "https://github.com/rbanik1204/task-manager",
+    title: "Competitive Programming",
+    description: "Active participation in competitive programming with strong problem-solving skills. Focused on algorithms, data structures, and efficient coding practices.",
+    tech: ["C++", "Algorithms", "Data Structures", "Problem Solving", "Competitive Programming"],
+    github: "https://github.com/rbanik1204/competitive-programming",
     live: "",
     icon: <FaCode className="text-2xl text-pink-400" />,
-    category: "Web App"
+    category: "Algorithms"
   }
 ];
 

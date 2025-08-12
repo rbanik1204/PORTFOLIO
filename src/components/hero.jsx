@@ -1,8 +1,7 @@
 import React from "react";
 import { useEffect, useRef } from "react";
 import * as THREE from "three";
-// Replace WhatsApp image with professional placeholder
-// import profileImg from "../assets/WhatsApp Image 2025-07-21 at 17.38.43_df50f27d.jpg";
+import profileImg from "../assets/WhatsApp Image 2025-07-21 at 17.38.43_df50f27d.jpg";
 
 const Hero = () => {
   const mountRef = useRef(null);
@@ -83,12 +82,16 @@ const Hero = () => {
             <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 blur-xl opacity-60 group-hover:opacity-80 transition-opacity duration-300"></div>
             {/* Main container with professional border - Mobile responsive sizes */}
             <div className="relative w-48 h-48 sm:w-64 sm:h-64 lg:w-80 lg:h-80 rounded-full border-4 border-gray-300/30 shadow-2xl flex items-center justify-center bg-gradient-to-br from-gray-800 to-gray-900 overflow-hidden backdrop-blur-sm">
-              {/* Professional placeholder - replace with your actual professional photo */}
-              <div className="w-full h-full bg-gradient-to-br from-blue-600 to-purple-600 flex items-center justify-center text-white text-4xl sm:text-5xl lg:text-6xl font-bold">
-                RB
-              </div>
+                             {/* Professional profile photo */}
+               <img 
+                 src={profileImg} 
+                 alt="Ratul Banik - Full Stack Developer" 
+                 className="w-full h-full object-cover object-top rounded-full"
+                 loading="eager"
+                 style={{ objectPosition: 'center 20%' }}
+               />
               {/* Add a subtle overlay for depth */}
-              <div className="absolute inset-0 bg-black/20"></div>
+              <div className="absolute inset-0 bg-black/10 rounded-full"></div>
             </div>
           </div>
         </div>
@@ -99,15 +102,15 @@ const Hero = () => {
             <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold text-white mb-3 sm:mb-4 leading-tight">
               Hi, I'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Ratul Banik</span>
             </h1>
-            <h2 className="text-lg sm:text-xl lg:text-2xl font-medium text-gray-300 mb-4 sm:mb-6">
-              Full Stack Developer & AI/ML Engineer
-            </h2>
-          </div>
-          
-          <p className="text-base sm:text-lg text-gray-300 mb-6 sm:mb-8 max-w-2xl leading-relaxed px-2 sm:px-0">
-            I craft modern, scalable web applications and develop intelligent AI solutions. 
-            Passionate about creating impactful technology that solves real-world problems.
-          </p>
+                         <h2 className="text-lg sm:text-xl lg:text-2xl font-medium text-gray-300 mb-4 sm:mb-6">
+               MERN Stack Developer & Competitive Programmer
+             </h2>
+           </div>
+           
+           <p className="text-base sm:text-lg text-gray-300 mb-6 sm:mb-8 max-w-2xl leading-relaxed px-2 sm:px-0">
+             Passionate Computer Science student with strong problem-solving skills. 
+             Building innovative solutions with modern technologies and AI/ML algorithms.
+           </p>
           
           {/* Buttons - Mobile Optimized */}
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-6 sm:mb-8 w-full sm:w-auto">

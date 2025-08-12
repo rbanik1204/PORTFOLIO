@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { FaLinkedin, FaGithub, FaTwitter, FaEnvelope, FaPhone, FaMapPin, FaHeart } from "react-icons/fa";
+import { FaLinkedin, FaGithub, FaTwitter, FaEnvelope, FaPhone, FaMapPin, FaHeart, FaDiscord } from "react-icons/fa";
+import { SiReddit } from "react-icons/si";
 
 const Contact = () => {
   const [showForm, setShowForm] = useState(false);
@@ -128,12 +129,28 @@ const Contact = () => {
                     <FaGithub className="text-lg sm:text-xl" />
                   </a>
                   <a
-                    href="https://twitter.com/ratulbanik1204"
+                    href="https://x.com/r_banik1204"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-10 h-10 sm:w-12 sm:h-12 bg-blue-400/20 hover:bg-blue-400/30 rounded-lg flex items-center justify-center text-blue-400 hover:text-blue-300 transition-all duration-300"
                   >
                     <FaTwitter className="text-lg sm:text-xl" />
+                  </a>
+                  <a
+                    href="https://www.reddit.com/user/AwareZookeepergame67/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-10 h-10 sm:w-12 sm:h-12 bg-orange-500/20 hover:bg-orange-500/30 rounded-lg flex items-center justify-center text-orange-400 hover:text-orange-300 transition-all duration-300"
+                  >
+                    <SiReddit className="text-lg sm:text-xl" />
+                  </a>
+                  <a
+                    href="https://discord.com/users/ratul4756"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-10 h-10 sm:w-12 sm:h-12 bg-purple-500/20 hover:bg-purple-500/30 rounded-lg flex items-center justify-center text-purple-400 hover:text-purple-300 transition-all duration-300"
+                  >
+                    <FaDiscord className="text-lg sm:text-xl" />
                   </a>
                 </div>
               </div>
