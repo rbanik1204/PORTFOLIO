@@ -45,8 +45,8 @@ const Resume = () => {
   const [pdfUrl, setPdfUrl] = useState("");
 
   useEffect(() => {
-    // Add timestamp to prevent caching issues and use correct base path
-    setPdfUrl(`/portfolio/ratul_resume.pdf?t=${Date.now()}`);
+    const base = (import.meta.env.BASE_URL || "/").replace(/\/$/, "/");
+    setPdfUrl(`${base}ratul_resume.pdf?t=${Date.now()}`);
   }, []);
 
   const handlePdfError = () => {
@@ -99,7 +99,7 @@ const Resume = () => {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="/portfolio/ratul_resume.pdf"
+              href={`${(import.meta.env.BASE_URL || '/').replace(/\/$/, '/')}ratul_resume.pdf`}
               download="Ratul_Banik_Resume.pdf"
               className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
@@ -107,7 +107,7 @@ const Resume = () => {
               Download Resume
             </a>
             <a
-              href="/portfolio/ratul_resume.pdf"
+              href={`${(import.meta.env.BASE_URL || '/').replace(/\/$/, '/')}ratul_resume.pdf`}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-3 px-8 py-4 border-2 border-blue-500 text-blue-400 font-semibold rounded-lg hover:bg-blue-500 hover:text-white transition-all duration-300 transform hover:scale-105"

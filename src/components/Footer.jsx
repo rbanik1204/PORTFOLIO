@@ -5,9 +5,9 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
   
   return (
-    <footer className="bg-gradient-to-t from-black to-gray-900 text-white py-16 relative overflow-hidden">
+    <footer className="bg-gradient-to-b from-black via-gray-900 to-black text-white py-16 relative overflow-hidden -mt-px">
       {/* Background pattern */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(59,130,246,0.1),transparent_50%)]"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(59,130,246,0.08),transparent_55%)]"></div>
       
       <div className="w-full max-w-6xl mx-auto px-6 z-10 relative">
         <div className="grid md:grid-cols-4 gap-8 mb-12">

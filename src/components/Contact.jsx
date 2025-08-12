@@ -48,9 +48,11 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="min-h-screen bg-gradient-to-b from-black via-gray-900 to-black text-white px-4 sm:px-6 py-16 sm:py-20 relative overflow-hidden">
+    <section id="contact" className="-mt-2 min-h-screen bg-gradient-to-b from-black via-gray-900 to-black text-white px-4 sm:px-6 py-16 sm:py-20 relative overflow-hidden">
+      {/* Seamless top fade to hide any boundary */}
+      <div className="pointer-events-none absolute top-0 left-0 right-0 h-6 bg-gradient-to-b from-black via-black/60 to-transparent"></div>
       {/* Background pattern */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.1),transparent_50%)]"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.08),transparent_55%)]"></div>
       
       <div className="w-full max-w-6xl mx-auto z-10 relative">
         <div className="text-center mb-12 sm:mb-16">
