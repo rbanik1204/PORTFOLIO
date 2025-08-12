@@ -3,16 +3,10 @@ import { FaDownload, FaAward, FaFilePdf, FaCertificate, FaGraduationCap, FaStar,
 
 const achievements = [
   {
-    title: "Smart India Hackathon Finalist",
-    description: "Reached final round in national-level hackathon",
-    icon: <FaTrophy className="text-2xl text-yellow-400" />,
-    category: "Competition"
-  },
-  {
-    title: "AI/ML Help Bot Winner",
-    description: "Developed innovative AI solution for MOSDAC portal",
+    title: "Full Stack Development",
+    description: "Built complete web applications with React, Node.js, and modern technologies",
     icon: <FaAward className="text-2xl text-blue-400" />,
-    category: "Innovation"
+    category: "Development"
   },
   {
     title: "React Development Certified",
@@ -33,10 +27,10 @@ const achievements = [
     category: "Cloud"
   },
   {
-    title: "Web Dev Bootcamp Topper",
-    description: "Achieved top position in web development program",
+    title: "Cognifyz Technologies Intern",
+    description: "Gained hands-on experience in professional development environment",
     icon: <FaGraduationCap className="text-2xl text-cyan-400" />,
-    category: "Education"
+    category: "Internship"
   }
 ];
 
